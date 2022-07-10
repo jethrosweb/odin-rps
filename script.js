@@ -12,3 +12,10 @@ const playerSelection = () => {
     }
 }
 
+// computer
+const computerSelection = () => {
+    let selection = options[Math.floor(Math.random() * 3)]
+    console.log(`Computer chose ${selection}`)
+    return selection
+}
+
