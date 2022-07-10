@@ -46,3 +46,26 @@ const playRound = () => {
         }
 }
 
+// game
+const game = () => {
+    for (let i = 0; i < 5; i++) {
+        playRound()
+        console.log(`Your score: ${playerScore}`)
+        console.log(`Computer score: ${computerScore}`);
+    }
+}
+
+// play game
+const playGame = () => {
+    game()
+
+    if (playerScore > computerScore) {
+        console.log(`You win! ${playerScore} beats ${computerScore}`)
+    } else if (playerScore < computerScore) {
+        console.log(`You lose! ${computerScore} beats ${playerScore}`);
+    } else {
+        console.log(`Tie game! Try again`);        
+    }
+}
+
+playGame()
